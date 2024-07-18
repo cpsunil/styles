@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><publishing-template>
+<name>Custom Template</name>
+<webhelp>
+<preview-image file="preview/generated-preview.png"/>
+<resources>
+<css file="PageLayouts.css"/>
+<css file="Elements.css"/>
+<fileset>
+<include name="resources/**/*"/>
+</fileset>
+</resources>
+<parameters>
+<parameter name="args.gen.task.lbl" value="YES"/>
+<parameter name="webhelp.show.main.page.tiles" value="yes"/>
+<parameter name="webhelp.show.main.page.toc" value="no"/>
+</parameters>
+</webhelp>
+<pdf>
+<preview-image file="preview/generated-preview.png"/>
+<resources>
+<css file="PageLayouts.css"/>
+<css file="Elements.css"/>
+</resources>
+<parameters>
+<parameter name="args.gen.task.lbl" value="YES"/>
+</parameters>
+</pdf>
+</publishing-template>

@@ -1,0 +1,607 @@
+/*  Default font and size for P element, 3 cm aligned from left margin */
+
+*[class="- topic/p p"]{
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:3cm;
+   /* border:0.1cm dotted blue;*/
+}
+
+/*  Table is aligned 3 cm from margin */
+
+
+*[class~="topic/table"]
+{
+    margin-left:3cm;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -oxy-hyphenation-character: "*"; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */
+    
+}
+/*  Table is set to full margin of the page */
+
+
+ *[class~="topic/table"][outputclass="pgwide"]
+{
+    margin-left:0cm !important;
+    /*overflow-wrap: break-word !important;*/
+    -oxy-hyphenation-character: " "; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */ 
+    /*border:0.1cm dotted black !important;*/
+    
+}
+
+/**[class~="topic/table"][pgwide="1"]
+{
+    margin-left:0cm !important;
+    overflow-wrap: break-word !important;
+    border:0.1cm dotted black !important;
+    
+}*/
+
+*[class~="topic/p"]  > *[class~="table-container"] > *[class~="topic/table"][outputclass="pgwide"]
+{
+    margin-left:-3cm !important;
+     /*overflow-wrap: break-word !important;*/
+    -oxy-hyphenation-character: " "; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */ 
+   /* border:0.1cm dotted black !important;*/
+    
+}
+
+*[class~="topic/body"]  > *[class~="table-container"] > *[class~="topic/table"][outputclass="pgwide"]
+{
+    margin-left:0cm !important;
+    /*overflow-wrap: break-word !important;*/
+    -oxy-hyphenation-character: " "; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */  
+   /* border:0.1cm dotted black !important;*/
+    
+}
+
+*[class~="task/info"]  > *[class~="table-container"] > *[class~="topic/table"][outputclass="pgwide"]
+{
+    margin-left:-3cm !important;
+   /*overflow-wrap: break-word !important;*/
+    -oxy-hyphenation-character: " "; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */ 
+   /* border:0.1cm dotted black !important;*/
+    
+}
+*[class~="task/context"]  > *[class~="table-container"] > *[class~="topic/table"][outputclass="pgwide"]
+{
+    margin-left:-3cm !important;
+    /*overflow-wrap: break-word !important;*/
+    -oxy-hyphenation-character: " "; /* removes hyphens in line-broken words */
+
+   -oxy-hyphenation-push-character-count: 6 !important; /* Minimum 3 characters pushed to next line */
+
+   -oxy-hyphenation-remain-character-count: 2 !important; /* Minimum 4 characters remain on previous line */ 
+   /* border:0.1cm dotted black !important;*/
+    
+}
+
+*[class ~= "topic/row"] {
+  page-break-inside: avoid;
+}
+
+*[class ~= "topic/entry"] {
+  -oxy-borders-conditionality: retain;
+  -oxy-hyphenation-character: " "; 
+}
+
+
+*[class~="topic/table"] > *[class~="topic/title"] {
+    font-size: 10pt !important;
+    font-family: arial, helvetica, sans-serif!important;
+    text-align: center;
+    padding-bottom: 0.25cm;
+}
+
+*[class~="topic/tbody"]
+{
+    font-size: 10pt;
+    font-family: arial, helvetica, sans-serif;
+    text-align: left;
+    
+}
+*[class~="topic/thead"]
+{
+    display: table-header-group;
+    font-size: 10pt;
+    font-family: arial, helvetica, sans-serif;
+
+  text-align: left;
+    font-weight: bold;
+    background-color: #B2BEB5;
+    
+}
+
+div.note>span.note__title {
+    font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;
+  text-align: left;
+    font-weight: bold;
+    font-style: italic;
+}
+*[class ~= "topic/note"] {
+    font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;
+  text-align: left;
+        background-image:none;
+       margin-left: 3cm;
+        text-align: initial;
+    
+}
+*[class ~= "topic/entry"] > *[class~="topic/note"]{
+  font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;
+  text-align: left;
+        background-image:none;
+       margin-left: 0cm;
+        text-align: initial;
+}
+
+
+div.note
+{
+background-image:none;
+padding:0cm;
+position:relative;
+}
+
+*[class~="topic/title"] 
+{
+    font-size: 24pt;
+    font-family: arial, helvetica, sans-serif;
+
+    font-weight: bold;
+}
+
+/**[class ~= "topic\fig"] span[class ~= "title"]
+{
+    font-size: 10pt;
+    font-family: arial, helvetica, sans-serif; 
+}
+
+*[class ~= "topic\table"] span[class ~= "title"]
+{
+    font-size: 10pt;
+    font-family: arial, helvetica, sans-serif;*/ 
+/*}*/
+
+figcaption 
+{font-size: 10pt !important;
+    font-family: arial, helvetica, sans-serif!important;
+    padding-bottom:0.25cm;}
+    
+*[class ~= "topic/fig"] {
+     margin-left:3cm;
+    text-align: center;
+}
+ 
+ *[class~= "task/info"] > [class ~= "topic/fig"] {
+     margin-left:0;
+    text-align: center;
+}
+ 
+ *[class~= "task/stepresult"]> [class ~= "topic/fig"] {
+     margin-left:0;
+    text-align: center;
+}
+ 
+ 
+ 
+*[class~= "topic/body"] > *[class~="topic/ol"],
+*[class~= "topic/body"] > *[class~="topic/ul"] {
+  padding-left: 0;
+  list-style-position: outside;
+  margin-left:3.2cm;
+ /* border:0.1cm dotted green;*/
+
+}
+
+*[class~= "topic/body"] > *[class~="topic/ol"]> *[class~="topic/li"],  *[class~= "topic/body"] > *[class~="topic/ul"]> *[class~="topic/li"]{
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    padding-left:0.3cm;
+    padding-bottom:0.1cm;
+   /* border: 0.1cm dotted black;*/
+    }
+
+
+ *[class~= "task/taskbody"] > *[class~= "task/prereq"]>    *[class~= "topic/ul"]{
+    padding-left: 0;
+  list-style-position: outside;
+  margin-left:3.2cm;
+ /* border:0.1cm dotted green;*/
+}
+
+*[class~= "task/taskbody"]> *[class~="task/prereq"]> *[class~="topic/ul"]> *[class~="topic/li"]{
+color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    padding-left:0.3cm;
+    padding-bottom:0.1cm;
+   /* border: 0.1cm dotted black;*/
+    }
+
+[class~= "task/stepresult"]>    *[class~= "topic/p"]{
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+
+
+
+[class~= "topic/note"]>    *[class~= "topic/p"]{
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+    margin-top:0cm;
+    display: contents;
+/*   border:0.1cm dotted blue;*/
+}
+
+[class~= "task/info"]>    *[class~= "topic/p"]{
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+    margin-top:0cm;
+ /*   display: contents;*/
+/*   border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/li"]>    *[class~= "topic/p"]{
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+    margin-top:0cm;
+ /*   display: contents;*/
+/*   border:0.1cm dotted blue;*/
+}
+
+
+[class~= "task/context"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:3cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "task/context"]>    *[class~= "topic/p"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/p"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/ul"] >      *[class~= "topic/li"]  > *[class~= "topic/p"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/ol"] >      *[class~= "topic/li"]  > *[class~= "topic/p"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/p"] >      *[class~= "topic/ul"]  > *[class~= "topic/li"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/p"] >      *[class~= "topic/ol"]  > *[class~= "topic/li"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+    margin-left:0cm;
+    margin-top:0cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "topic/entry"]>    *[class~= "topic/ol"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+   
+    
+    padding-left: 0;
+  list-style-position: outside;
+  margin-left:0.5cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+
+[class~= "topic/entry"]>    *[class~= "topic/ul"]   {
+    color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:10pt;
+   
+    
+    padding-left: 0;
+  list-style-position: outside;
+  margin-left:0.5cm;
+  /* border:0.1cm dotted blue;*/
+}
+
+[class~= "task/stepresult"]>*[class~= "topic/note"]{
+    margin-left:0cm;
+    /*border:0.1cm dotted blue;*/
+}
+
+
+
+
+
+
+[class~= "topic/li"] >*[class~= "topic/note"]{
+    margin-left:0cm;
+    /*border:0.1cm dotted blue;*/
+}
+
+[class~= "task/info"] >*[class~= "topic/note"]{
+    margin-left:0cm;
+    /*border:0.1cm dotted blue;*/
+}
+
+h1
+{font-size:24pt !important;}
+
+
+h2
+{font-size:18pt !important;}
+
+h3
+{font-size:15pt !important;}
+
+h4
+{font-size:13pt !important;}
+
+*[class ~= "topic/xref"][href]:after,
+*[class ~= "topic/link"][href]:after {
+    content: none !important;
+}
+
+/*  to remove "chapter" from the titles */
+*[class ~= "topic/topic"][is-chapter]:not([is-part]) > *[class ~= "topic/title"]:before {
+    content: none !important;
+}
+
+th
+{text-align:left !important;}
+
+
+*[class~="topic/link"][href]:empty,
+*[class~="topic/xref"][href]:empty,
+*[class~="topic/link"][type][href]:empty,
+*[class~="topic/xref"][type][href]:empty {
+    content: none !important;
+}
+
+
+
+*[class~="task/prereq"]> div.tasklabel {
+content : "Prerequisites" ;
+font-size:18pt !important;
+color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-weight:bold;
+    padding-bottom:0.5cm;
+     prince-bookmark-level: 2;
+  -ah-bookmark-level: 2;
+  bookmark-level: 2;
+  bookmark-label: "Prerequisites";	
+    -ah-bookmark-label: "Prerequisites";
+
+}
+
+
+
+
+*[class~="topic/shortdesc"]{
+color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:3cm;
+}
+
+*[class~="task/steps"] {
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+   /* border: 0.1cm dotted black;*/
+    }
+    
+    
+    
+    *[class~="task/steps"]> div.tasklabel{
+content : "Procedure" ;
+font-size:18pt !important;
+color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-weight:bold;
+    margin-left:0;
+    padding-left:0;
+    prince-bookmark-level: 2;
+  -ah-bookmark-level: 2;
+  bookmark-level: 2;
+  bookmark-label: content(before) content();	
+    -ah-bookmark-label: content(before) content();
+   /* border: 0.1cm dotted black;*/
+}
+ *[class~="task/taskbody"][outputclass="noheading"] div.tasklabel {
+content : "" ;
+ bookmark-label: none;	
+    -ah-bookmark-label: none;
+/*font-size:18pt !important;
+color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-weight:bold;
+    margin-left:0;
+    padding-left:0;
+    prince-bookmark-level: 2;
+  -ah-bookmark-level: 2;
+  bookmark-level: 2;
+  bookmark-label: content(before) content();	
+    -ah-bookmark-label: content(before) content();*/
+   /* border: 0.1cm dotted black;*/
+}
+
+ *[class~= "task/taskbody"] > *[class~= "topic/ol"], [class~= "topic/ul"] {
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:0cm;
+  /* border: 0.1cm dotted black;*/
+    }
+    
+      *[class~= "topic/ol"] > *[class~= "task/steps"] {
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    margin-left:3.2cm;
+    padding-left:0;
+  /* border: 0.1cm dotted black*/;
+    }
+    
+    *[class~= "task/steps"]>    *[class~= "task/step"]{
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    padding-left:0.3cm;
+    padding-bottom:0.1cm;
+   /* border: 0.1cm dotted black;*/
+    }
+    
+    *[class~= "task/steps"]>    *[class~= "task/stepsection"]{
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    padding-left:0 !important;
+    margin-left:3.2cm !important;
+  /*  border: 0.1cm dotted black;*/
+    }
+
+
+*[class~='sw-d/cmdname']{
+    font-style:italic;
+    font-weight:bold;
+    margin-top:0.3cm;
+}
+
+*[class~='sw-d/filepath']{
+    font-size: 10pt;
+}
+
+
+
+[class~= "topic/note"]> *[class~='sw-d/cmdname']{
+    display: block;
+    margin-top:0.1cm;
+}
+
+*[class~= "task/info"] > *[class~= "topic/ul"] > *[class~= "topic/li"]::marker{
+content:'• ';
+ 
+}
+  
+  *[class~= "topic/note"] > *[class~= "topic/ul"] > *[class~= "topic/li"]::marker{
+content:'• ';
+ 
+}
+  
+  *[class~= "topic/p"]> *[class~= "topic/ul"] > *[class~= "topic/li"]::marker{
+content:'• ';
+ 
+}
+
+
+*[class~= "task/info"] > *[class~= "topic/ol"], [class~= "topic/ul"] {
+      color:black;
+    text-align:left;
+    font-family: arial, helvetica, sans-serif;
+    font-size:12pt;
+    padding-left:0.3cm;
+   /* margin-left:0cm;*/
+  /* border: 0.1cm dotted black;*/
+    }
+    
+
+

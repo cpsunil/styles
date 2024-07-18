@@ -1,0 +1,470 @@
+/*Sets the front page of the PDF*/
+
+@page front-page
+{
+/*Sets the size of the page to A4 and padding to zero.*/
+    size: A4; 
+    padding:0cm;
+/*Sets the margin from the top, bottom, left, and right accordingly. This margin is for the header image space.*/
+    /*margin-top: 3.03cm;  
+    margin-bottom: 2.26cm;
+    margin-left: 1.06cm;
+    margin-right: 0.81cm;*/ 
+/*Sets the company logo in the front page.*/
+        background-image: url(../images/Logo.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 70% 70%;
+/*Sets the header image in the front page.*/ 
+     /*@top-left{
+        content: " ";
+    background-image: url(../images/Reference.png);
+     background-repeat: no-repeat;
+        background-position: 0 1cm;
+        background-size: 100% 100%;
+         }*/
+  /*Sets the footer image in the front page.*/        
+        @bottom-left{
+        content: string(mapcreated); /*Sets the footer content in the front page.*/  
+  /*  background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% 100%;
+         font-size:12pt;
+        font-family:arial, helvetica, sans-serif;
+        font-weight:bold;*/
+       }           
+        }
+/*Sets the front page content derived from the bookmaptitle.*/  
+*[class~="front-page/front-page-title"] {
+        display:block;
+        text-align:left;
+        margin-top: 20cm;
+        font-size:24pt;
+        font-family:arial, helvetica, sans-serif;
+        font-weight:bold;
+    }
+ /*Sets the footer content from the created DITA element from the bookmaptitle.*/ 
+    *[class ~= "front-page/front-page"] > 
+  *[class ~= "map/topicmeta"] > 
+    *[class ~= "topic/critdates"] > 
+      *[class ~= "topic/created"]
+      {
+       string-set: mapcreated attr(date);
+        }
+
+
+@page matter-page:left
+{
+size: A4;
+padding: 0cm;
+color: black;
+    margin-top: 3cm;
+         margin-bottom: 6cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   
+          @top-left{
+        content: "";
+         background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+      background-position: 0 2cm;
+        background-size: 100% 100%;
+     
+         }
+          
+             @bottom-left{
+       content: "<<copyright content>>";         
+    background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 4cm;
+        background-size: 100% 100%;
+        font-size: 8pt;
+        font-family:arial, helvetica, sans-serif;
+       
+                 }
+}
+
+@page matter-page:right
+{
+size: A4;
+padding: 0cm;
+color: black;
+    margin-top: 3cm;
+         margin-bottom: 6cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   
+          @top-left{
+        content: "\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0";
+         background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+      background-position: 0 2cm;
+        background-size: 200% 200%;
+      /*  border:0.1cm dotted blue;*/
+     
+         }
+         
+             @bottom-left{
+       content: "<<copyright content>>";         
+    background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 4cm;
+        background-size: 100% 100%;
+        font-size: 8pt;
+        font-family:arial, helvetica, sans-serif;
+       
+                 }
+                 @top-right{
+        content: "" !important;
+        /*border:0.1cm dotted red;*/
+        }
+}
+
+
+@page table-of-contents:right
+{
+size: A4;
+padding: 0cm;
+color: black;
+    margin-top: 2.5cm;
+         margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+         @top-left{
+          content: "";
+     background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 2cm;
+        background-size: 100% 100%;
+         /*font-family: arial, helvetica, sans-serif;
+    font-size: 24pt;
+     font-weight:bold;*/
+      /*  vertical-align: bottom;*/
+        /* border:0.1cm dotted blue;*/
+         
+       }
+       
+       @bottom-left{
+        content: counter(page);      
+     background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 0;
+       background-size: 100% 100%;
+        text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+          /*border:0.1cm dotted red;*/
+               }    
+               @top-right{
+        content: none !important;
+        /*border:0.1cm dotted red;*/
+        }
+}
+
+@page table-of-contents:left
+{
+size: A4;
+padding: 0cm;
+color: black;
+    margin-top: 2.5cm;
+         margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+         @top-right{
+        content: "";
+     background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 2cm;
+        background-size: 100% 100%;
+         /*font-family: arial, helvetica, sans-serif;
+    font-size: 24pt;
+     font-weight:bold;*/
+      /*  vertical-align: bottom;*/
+        /* border:0.1cm dotted blue;*/
+         
+       }
+      
+       @bottom-left{
+        content: counter(page);      
+     background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: 0 0;
+       background-size: 100% 100%;
+        text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+          /*border:0.1cm dotted red;*/
+               }    
+               @top-left{
+        content: "" !important;
+       /* border:0.1cm dotted red;*/
+        }
+               
+               
+}
+
+
+*[class ~= "map/topicref"] *[class ~= "topic/navtitle"] {
+    font-family: arial, helvetica, sans-serif;
+    font-size:14pt;
+    font-weight:bold;
+    line-height: 20pt;
+}
+
+
+*[class ~= "toc/title"][empty]:before {
+	 content: "Table of contents";
+	  font-family: arial, helvetica, sans-serif;
+    font-size: 24pt;
+     font-weight:bold;
+ 
+}
+
+
+
+@page chapter:first:right
+{
+size: A4;
+padding:0%;
+margin-top:3cm;
+ margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   /* border: 0.1cm dotted red;*/
+  @top-left {
+    content: oxy_label(text, "Chapter\A0\A0", styles, "color:black; font-weight:bold; font-size: 24pt") ' ' string(chaptercounter)"\A0\A0";
+        background-image: url(../images/FirstPageHeaderBlock.png);
+     background-repeat: no-repeat;
+         background-position: 0 0.7cm;
+        background-size: 100% 100%;
+        margin: 0cm;
+      text-align:right;
+             font-weight: bold;
+             font-size: 36pt;
+             border: 0cm;    
+             color: white;
+  }
+
+   @bottom-left{
+         content: counter(page);  
+   background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+         text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+        
+       }      
+}
+
+
+
+@page chapter:first:left{
+size: A4;
+padding:0%;
+margin-top:3cm;
+ margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   /* border: 0.1cm dotted red;*/
+  @top-left {
+    content: oxy_label(text, "Chapter\A0\A0", styles, "color:black; font-weight:bold; font-size: 24pt") ' ' string(chaptercounter)"\A0\A0";
+    
+    background-image: url(../images/FirstPageHeaderBlock.png);
+     background-repeat: no-repeat;
+         background-position: 0 0.7cm;
+        background-size: 100% 100%;
+        margin: 0cm;
+      text-align:right;
+             font-weight: bold;
+             font-size: 36pt;
+             border: 0cm;   
+             color: white;
+  }
+
+   @bottom-left{
+         content: counter(page);  
+   background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+         text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+        
+       }      
+}
+
+@page chapter:left{
+size: A4;
+padding:0%;
+margin-top:3cm;
+ margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   /* border: 0.1cm dotted red;*/
+  @top-left {
+     content: /*string(chaptertitle)"\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0"*/  string(chaptercounter)"\A0\A0";
+   background-image: url(../images/HeaderFooterBlock.png);
+     background-repeat: no-repeat;
+         background-position: 0 0.7cm;
+        background-size: 100% 100%;
+        margin: 0cm;
+      text-align:right;
+             font-weight: bold;
+             font-size: 24pt;
+             border: 0cm;    
+             color: white;
+  }
+
+   @bottom-left{
+         content: counter(page);  
+   background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+         text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+        
+       }      
+}
+
+@page chapter:right
+{
+size: A4;
+padding:0%;
+margin-top:3cm;
+ margin-bottom: 2cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+   /* border: 0.1cm dotted red;*/
+  @top-left {
+   content: /*string(chaptertitle)"\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0"*/  string(chaptercounter)"\A0\A0";
+    background-image: url(../images/HeaderFooterBlock.png);
+     background-repeat: no-repeat;
+         background-position: 0 0.7cm;
+        background-size: 100% 100%;
+        margin: 0cm;
+      text-align:right;
+             font-weight: bold;
+             font-size: 24pt;
+             border: 0cm;    
+             color: white;
+  }
+
+   @bottom-left{
+         content: counter(page);  
+   background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+         text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+        
+       }      
+}
+
+
+
+*[class ~= "topic/topic"][is-chapter]:not([is-part]) > *[class ~= "topic/title"] {
+    string-set: chaptertitle content(), chaptercounter counter(chapter);
+}
+
+
+
+
+
+   
+
+@page :left
+{
+size: A4;
+
+padding-top:0em;
+    padding-bottom:0em;
+
+  /*  margin: 0in;
+*/
+    margin-top: 4cm;
+         margin-bottom: 3cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+         @top-left{
+        content: " ";
+   /* background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;*/
+       }
+       @bottom-left{
+        content: " ";         ;
+    /* background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+       background-size: 100% 100%;*/
+               }
+                @top-right          {          content:none }
+}
+
+
+
+
+
+@page :right
+{
+size: A4;
+
+padding-top:0em;
+    padding-bottom:0em;
+
+  /*  margin: 0in;*/
+    
+    margin-top: 4cm;
+         margin-bottom: 3cm;
+         margin-left: 1.06cm;
+    margin-right: 0.81cm;
+         @top-left{
+        content: " ";
+   /* background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;*/
+       }
+       @bottom-left{
+        content: " ";         ;
+  /*  background-image: url(../images/HeaderFooterNoBlock.png);
+     background-repeat: no-repeat;
+        background-position: center;
+       background-size: 100% 100%;*/
+        
+       }           
+        @top-right          {          content:none }
+       
+}
+   
+   
+   @page {
+    padding-top:0em;
+    padding-bottom:0em;
+    size: A4;
+   /* margin: 0in;*/
+}
+   
+   
+   *[class ~= "map/map"] > *[class ~= "toc/toc"] > *[class ~= "bookmap/frontmatter"] {
+    display: none;
+}
+
+
+
+:root {
+  -oxy-pdf-viewer-fit-window: true;
+  -oxy-pdf-viewer-zoom: fit-page;
+  -oxy-pdf-viewer-page-layout: single-page;
+}
+
+
